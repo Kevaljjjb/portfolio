@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Keval Laheri - Data Engineer specializing in AI Integration, Web Scraping, and Automation. Turning raw data into actionable insights.">
+        <meta name="keywords" content="Data Engineer, AI Integration, Web Scraping, Automation, Python, Selenium, LLM">
+        <meta name="author" content="Keval Laheri">
+        <title>Keval Laheri | Data Engineer & AI Specialist</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+
+    <body>
+        <!-- Background -->
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">Keval<span>.</span></a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <p class="hero-greeting">Hi, I'm</p>
+                            <h1 class="hero-name">Keval Laheri</h1>
+                            <h2 class="hero-title">DATA ENGINEER & AI ARCHITECT</h2>
+                            <p class="hero-description">
+                                Building autonomous AI systems, robust data pipelines, and intelligent automation at
+                                scale.
+                            </p>
+                            <div class="hero-separator"></div>
+
+                            <div class="hero-search-container">
+                                <div class="search-box glass-card">
+                                    <i data-lucide="search"></i>
+                                    <input type="text" id="hero-search" placeholder="Search portfolio...">
+                                </div>
+                            </div>
+
+                            <div class="hero-quick-filters">
+                                <button class="filter-btn active" data-filter="all">All Works</button>
+                                <button class="filter-btn" data-filter="ai">AI Agents</button>
+                                <button class="filter-btn" data-filter="automation">Automation</button>
+                                <button class="filter-btn" data-filter="data">Data Eng</button>
+                            </div>
+
+                            <div class="hero-stats">
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Success</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">5.0</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="hero-avatar glass-card">
+                                <div class="avatar-placeholder">
+                                    <span>KL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="about-grid-full">
+                        <div class="about-info-panel fade-in-up">
+                            <h2 class="section-title text-left">The Vision</h2>
+                            <div class="about-text glass-card">
+                                <p>
+                                    I'm a <strong>Data & AI Engineer</strong> dedicated to building high-performance
+                                    automation and AI-driven workflows. From deploying cutting-edge LLMs like
+                                    <strong>GPT-4o</strong>, <strong>Gemini 1.5 Pro</strong>, and <strong>Claude
+                                        3.5 Sonnet</strong>
+                                    to orchestrating complex RAG pipelines, my mission is to bridge the gap between
+                                    raw data and intelligent, scalable solutions.
+                                </p>
+                                <p>
+                                    I've deployed and optimized models across diverse infrastructure—from hyperscalers
+                                    like <strong>AWS, GCP, & Azure</strong> to GPU clouds like <strong>Runpod, Vast.ai,
+                                        & Lightning AI</strong>. I leverage tools like <strong>vLLM, Ollama, &
+                                        TensorRT-LLM</strong>
+                                    for efficient inference. On the agentic side, I build with <strong>LangChain,
+                                        LlamaIndex, CrewAI, & n8n</strong> to create sophisticated, autonomous systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-categories fade-in-up">
+                        <!-- Category: Core Stack -->
+                        <div class="tech-category">
+                            <h3 class="category-title">Core Stack</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="Python"><i
+                                        class="devicon-python-plain"></i><span>Python</span></div>
+                                <div class="tech-item glass-card" title="Docker"><i class="devicon-docker-plain"
+                                        style="color: #2496ed;"></i><span>Docker</span></div>
+                                <div class="tech-item glass-card" title="Pandas">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                                        alt="Pandas">
+                                    <span>Pandas</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Node.js"><i
+                                        class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                                <div class="tech-item glass-card" title="FastAPI"><i
+                                        class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Category: AI Models -->
+                        <div class="tech-category">
+                            <h3 class="category-title">AI Models</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="OpenAI">
+                                    <img src="https://www.svgrepo.com/show/306500/openai.svg" alt="OpenAI"
+                                        style="filter: invert(1);">
+                                    <span>OpenAI</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Google Gemini">
+                                    <img src="https://cdn.simpleicons.org/googlegemini/ffffff" alt="Gemini">
+                                    <span>Gemini</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Anthropic Claude">
+                                    <img src="https://cdn.simpleicons.org/claude/ffffff" alt="Claude">
+                                    <span>Claude</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Groq">
+                                    <span class="tech-text-icon" style="color: #f55036;">⚡</span>
+                                    <span>Groq</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Open Source LLMs">
+                                    <span class="tech-text-icon">🦙</span>
+                                    <span>Llama / Qwen</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category: AI Infrastructure -->
+                        <div class="tech-category">
+                            <h3 class="category-title">AI Infrastructure</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="AWS"><i
+                                        class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                                <div class="tech-item glass-card" title="Google Cloud"><i
+                                        class="devicon-googlecloud-plain"></i><span>GCP</span></div>
+                                <div class="tech-item glass-card" title="Azure"><i
+                                        class="devicon-azure-plain"></i><span>Azure</span></div>
+                                <div class="tech-item glass-card" title="Runpod">
+                                    <span class="tech-text-icon" style="color: #6d28d9;">🚀</span>
+                                    <span>Runpod</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Vast.ai">
+                                    <span class="tech-text-icon" style="color: #3b82f6;">V</span>
+                                    <span>Vast.ai</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Lightning AI">
+                                    <span class="tech-text-icon" style="color: #a855f7;">⚡</span>
+                                    <span>Lightning</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category: Inference & Deployment -->
+                        <div class="tech-category">
+                            <h3 class="category-title">Inference & Deployment</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="Ollama">
+                                    <img src="https://cdn.simpleicons.org/ollama/ffffff" alt="Ollama">
+                                    <span>Ollama</span>
+                                </div>
+                                <div class="tech-item glass-card" title="vLLM">
+                                    <img src="https://raw.githubusercontent.com/vllm-project/media-kit/main/vLLM-Logo.svg"
+                                        alt="vLLM">
+                                    <span>vLLM</span>
+                                </div>
+                                <div class="tech-item glass-card" title="llama.cpp">
+                                    <span class="tech-text-icon">cpp</span>
+                                    <span>llama.cpp</span>
+                                </div>
+                                <div class="tech-item glass-card" title="TensorRT-LLM">
+                                    <img src="https://cdn.simpleicons.org/nvidia/76b900" alt="TensorRT-LLM">
+                                    <span>TRT-LLM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category: RAG & Ecosystem -->
+                        <div class="tech-category">
+                            <h3 class="category-title">RAG & AI Ecosystem</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="LangChain">
+                                    <span class="tech-text-icon">🦜</span>
+                                    <span>LangChain</span>
+                                </div>
+                                <div class="tech-item glass-card" title="LlamaIndex">
+                                    <span class="tech-text-icon">🦙</span>
+                                    <span>LlamaIndex</span>
+                                </div>
+                                <div class="tech-item glass-card" title="CrewAI">
+                                    <span class="tech-text-icon" style="color: #ff4d4d;">🤖</span>
+                                    <span>CrewAI</span>
+                                </div>
+                                <div class="tech-item glass-card" title="n8n Automation">
+                                    <img src="https://cdn.simpleicons.org/n8n/ff6d5a" alt="n8n">
+                                    <span>n8n</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Browser Use">
+                                    <span class="tech-text-icon" style="color: #3b82f6;">🌐</span>
+                                    <span>browser-use</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category: Vector & Graph DBs -->
+                        <div class="tech-category">
+                            <h3 class="category-title">Vector & Graph DBs</h3>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item glass-card" title="Qdrant">
+                                    <span class="tech-text-icon" style="color: #ff4d4d;">Q</span>
+                                    <span>Qdrant</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Chroma">
+                                    <span class="tech-text-icon">🎨</span>
+                                    <span>Chroma</span>
+                                </div>
+                                <div class="tech-item glass-card" title="Neo4j"><i class="devicon-neo4j-plain"
+                                        style="color: #008cc1;"></i><span>Neo4j</span></div>
+                                <div class="tech-item glass-card" title="Supabase"><i class="devicon-supabase-plain"
+                                        style="color: #3ecf8e;"></i><span>Supabase</span></div>
+                                <div class="tech-item glass-card" title="MongoDB"><i class="devicon-mongodb-plain"
+                                        style="color: #47a248;"></i><span>MongoDB</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects" id="projects">
+                <div class="container">
+                    <header class="section-header">
+                        <h2 class="section-title">SELECTED PROJECTS</h2>
+                        <p class="section-subtitle">Architecting robust data pipelines, crafting intuitive AI
+                            dashboards, and deploying machine learning models at scale.</p>
+                        <div class="header-separator"></div>
+
+                        <div class="project-controls">
+                            <div class="search-box glass-card">
+                                <i data-lucide="search"></i>
+                                <input type="text" id="project-search"
+                                    placeholder="Search projects by technology, topic, or keyword...">
+                            </div>
+                            <div class="project-filters">
+                                <button class="filter-btn active" data-category="all">All Projects</button>
+                                <button class="filter-btn" data-category="ai">AI & Machine Learning</button>
+                                <button class="filter-btn" data-category="data">Data Engineering</button>
+                                <button class="filter-btn" data-category="automation">Automation</button>
+                                <button class="filter-btn" data-category="web">Web Scraping</button>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="projects-bento">
+                        <div class="project-card glass-card project-featured">
+                            <div class="project-image">
+                                <img src="asset/project_ecommerce.png" alt="E-commerce Automation">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">Featured</span>
+                                    <span class="project-amount">$2,450</span>
+                                </div>
+                                <h3>E-commerce Data Automation</h3>
+                                <p>Architected a high-throughput automation engine that extracts, cleanses, and
+                                    synchronizes multi-market data at scale. Integrated advanced stealth mechanisms to
+                                    bypass modern anti-scraping layers.</p>
+                                <div class="project-tech">
+                                    <i class="devicon-python-plain"></i>
+                                    <i class="devicon-selenium-original"></i>
+                                    <i class="devicon-mongodb-plain"></i>
+                                    <i class="devicon-docker-plain"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card">
+                            <div class="project-image">
+                                <img src="asset/project_scraping.png" alt="AI Scraping Tool">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">AI Integration</span>
+                                    <span class="project-amount">$363</span>
+                                </div>
+                                <h3>AI Scraping Tool</h3>
+                                <p>Self-learning scraper that adapts to DOM changes via LLM logic.</p>
+                                <div class="project-tech">
+                                    <i class="devicon-python-plain"></i>
+                                    <i class="devicon-openai-plain"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card">
+                            <div class="project-image">
+                                <img src="asset/project_supermarket.png" alt="Supermarket Data">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">Data Eng</span>
+                                    <span class="project-amount">$170</span>
+                                </div>
+                                <h3>Supermarket Scaler</h3>
+                                <p>Distributed pipeline processing millions of retail SKUs daily.</p>
+                                <div class="project-tech">
+                                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                                    <i class="devicon-pandas-original"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card project-wide">
+                            <div class="project-image">
+                                <img src="asset/project_parser.png" alt="PDF Data Scraping">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">Automation</span>
+                                    <span class="project-amount">$180</span>
+                                </div>
+                                <h3>Structured Doc Parser</h3>
+                                <p>OCR-driven system for extracting hierarchical data from complex PDF structures with
+                                    99.9% accuracy.</p>
+                                <div class="project-tech">
+                                    <i class="devicon-python-plain"></i>
+                                    <i class="devicon-mysql-plain"></i>
+                                    <i class="devicon-docker-plain"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials" id="testimonials">
+                <div class="container">
+                    <header class="testimonials-header-content">
+                        <h2 class="section-title">CLIENT TESTIMONIALS</h2>
+                        <p class="section-subtitle">
+                            Building trust through impactful data solutions and reliable partnerships.
+                        </p>
+                    </header>
+
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" id="testimonial-prev" aria-label="Previous testimonial">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="slider-arrow next" id="testimonial-next" aria-label="Next testimonial">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="testimonials-scroll-container no-scrollbar" id="testimonial-slider">
+                        <div class="testimonials-flex-inner">
+                            <!-- Card 1: Sarah Chen -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "The real-time crypto sentiment analysis pipeline delivered exceeded our
+                                        expectations in speed and accuracy."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqABYAgvokn3itJdfgnRqZ5j1g4FtXY7p9FttVX-dbH6jgxwv7Ql4jxir7_wMleKmHmhw-XH9yVy8X7O0CYzFSuwiZ-3PPIu73-Q2U0ikk_KaXpgCGa6cu1de9C9pfi1i4Ik4xV2Lyj9Nv7I28bWUqf5UCmcTeA8lzWZ14qFeHYewWBK5mxPFbf2DZTbwcQ4ce726silA9_FBRatq2Ofzyk9cvG05-moVZS1N5SPTb00TbidFFIMc2O6p8B_-c-9WbuoxJ7A4N6s"
+                                        alt="Sarah Chen" class="author-img">
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Sarah Chen</h3>
+                                        <p class="author-title">CTO, FinTech Solutions</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 2: Ririvin Covanderson -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "The real-time crypto sentiment analysis pipeline delivered exceeded our
+                                        expectations... Built to scale using Data and Spark Streaming..."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYB_r08W5W2lvKnzCBa-hLDI1uAAbyyyz9GcbxZMiA6U8vqWFS3fno4DS15Ge50J2zD1mZUwgUXYUEBL8v8jaDRO8PVNEsZQ7vzcJMEe1Gzqoa_yi3MGFFTcO0HmZQQYzwHcJHntBb-ZXyd9oVMHo5mziDsjbWSSxMiO0qT5MwJvLKFOgdEozCCXiNi-oQeUVfhddmfaTR35IYc_7jUChE-j1iEADD0lR0ICT7MAdQtDoHO4ufbmdv-A1VONflGuolZUN70Nj3zZc"
+                                        alt="Ririvin Covanderson" class="author-img">
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Ririvin Covanderson</h3>
+                                        <p class="author-title">Company Inc.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 3: Jennifer Pornador -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "The real-time crypto sentiment analysis pipeline delivered... Built to scale
+                                        using Il and Kafka..."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzT52o41zKaq7DKAVtEqRM6BidJdwLA2tevA6r4lVlvJSMqRaHgCL4hQPaLKimt3Phny1wb8RmK6WLhthb7tysCa1mHuYYXeFcg_YDcdtRw__PmCxB8E_NLnfhKob_okHebKl3cg8Kdzv7qAymFCL7gurtgGtdmsV4AXfPKEVEHbIXq8AWNIJHymMgoqkGDzLfHzK4p8l4uExv57XiLhYHZu94YYp2u6ShA7-ySzNGciwy5DR96_rrfOt2qwa4IliWRb63lDicLR0"
+                                        alt="Jennifer Pornador" class="author-img">
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Jennifer Pornador</h3>
+                                        <p class="author-title">Company Eirams</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 4: Leuis Kil -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "The real-time... delivered exceeded our expectations in speed and accuracy. It
+                                        was a pleasure working with the team."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzT52o41zKaq7DKAVtEqRM6BidJdwLA2tevA6r4lVlvJSMqRaHgCL4hQPaLKimt3Phny1wb8RmK6WLhthb7tysCa1mHuYYXeFcg_YDcdtRw__PmCxB8E_NLnfhKob_okHebKl3cg8Kdzv7qAymFCL7gurtgGtdmsV4AXfPKEVEHbIXq8AWNIJHymMgoqkGDzLfHzK4p8l4uExv57XiLhYHZu94YYp2u6ShA7-ySzNGciwy5DR96_rrfOt2qwa4IliWRb63lDicLR0"
+                                        alt="Leuis Kil" class="author-img">
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Leuis Kil</h3>
+                                        <p class="author-title">CTO, FinTech...</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Card 5: Marcus Thorne -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "The automation scripts delivered saved us over 40 hours of manual work weekly.
+                                        The precision in data extraction from complex PDFs is simply unmatched."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqABYAgvokn3itJdfgnRqZ5j1g4FtXY7p9FttVX-dbH6jgxwv7Ql4jxir7_wMleKmHmhw-XH9yVy8X7O0CYzFSuwiZ-3PPIu73-Q2U0ikk_KaXpgCGa6cu1de9C9pfi1i4Ik4xV2Lyj9Nv7I28bWUqf5UCmcTeA8lzWZ14qFeHYewWBK5mxPFbf2DZTbwcQ4ce726silA9_FBRatq2Ofzyk9cvG05-moVZS1N5SPTb00TbidFFIMc2O6p8B_-c-9WbuoxJ7A4N6s"
+                                        alt="Marcus Thorne" class="author-img">
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Marcus Thorne</h3>
+                                        <p class="author-title">Head of Operations, LogiStream</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Dots Navigation -->
+                    <div class="testimonials-nav">
+                        <span class="nav-dot active"></span>
+                        <span class="nav-dot"></span>
+                        <span class="nav-dot"></span>
+                        <span class="nav-dot"></span>
+                        <span class="nav-dot"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's connect and bring your next project to life</p>
+                    <div class="contact-content">
+                        <div class="contact-info glass-card">
+                            <h3>Let's Work Together</h3>
+                            <p>
+                                I'm always interested in hearing about new projects and opportunities.
+                                Whether you need help with data automation, web scraping, or AI integration,
+                                I'd love to hear from you.
+                            </p>
+                            <div class="contact-links">
+                                <a href="https://www.upwork.com/freelancers/~0131c361dd5f16ce26" target="_blank"
+                                    class="contact-link">
+                                    <span class="link-icon"><i data-lucide="briefcase"></i></span>
+                                    <span>Hire on Upwork</span>
+                                </a>
+                                <a href="mailto:contact@example.com" class="contact-link">
+                                    <span class="link-icon"><i data-lucide="mail"></i></span>
+                                    <span>Email Me</span>
+                                </a>
+                                <a href="https://github.com" target="_blank" class="contact-link">
+                                    <span class="link-icon"><i data-lucide="github"></i></span>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" class="contact-link">
+                                    <span class="link-icon"><i data-lucide="linkedin"></i></span>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                        <form class="contact-form glass-card" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Keval Laheri. All rights reserved.</p>
+                    <p>Data Engineer | Rajkot, India</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script>lucide.createIcons();</script>
+    </body>
+
+</html>
