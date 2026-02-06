@@ -594,3 +594,69 @@ function initMatrixEffect() {
 
     observer.observe(canvas);
 }
+
+// Initialize Matrix Effect
+document.addEventListener('DOMContentLoaded', () => {
+    initMatrixEffect();
+
+    // Contact Form Handling (AJAX)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        showNotification('Message sent successfully! I will get back to you soon.', 'success');
+                        contactForm.reset();
+                    } else {
+                        showNotification('Oops! Something went wrong. Please try again.', 'error');
+                    }
+                })
+                .catch(error => {
+                    showNotification('Error sending message. Please try again later.', 'error');
+                    console.error('Form error:', error);
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+});
+
+// Notification System
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerText = message;
+
+    document.body.appendChild(notification);
+
+    // Use timeout to allow CSS transition to work
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
