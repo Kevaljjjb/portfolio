@@ -56,19 +56,19 @@
                             </p>
                             <div class="hero-separator"></div>
 
-                            <div class="hero-search-container">
+                            <!-- <div class="hero-search-container">
                                 <div class="search-box glass-card">
                                     <i data-lucide="search"></i>
                                     <input type="text" id="hero-search" placeholder="Search portfolio...">
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="hero-quick-filters">
+                            <!-- <div class="hero-quick-filters">
                                 <button class="filter-btn active" data-filter="all">All Works</button>
                                 <button class="filter-btn" data-filter="ai">AI Agents</button>
                                 <button class="filter-btn" data-filter="automation">Automation</button>
                                 <button class="filter-btn" data-filter="data">Data Eng</button>
-                            </div>
+                            </div> -->
 
                             <div class="hero-stats">
                                 <div class="stat">
@@ -79,16 +79,16 @@
                                     <span class="stat-number">100%</span>
                                     <span class="stat-label">Success</span>
                                 </div>
-                                <div class="stat">
+                                <!-- <div class="stat">
                                     <span class="stat-number">5.0</span>
                                     <span class="stat-label">Rating</span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="hero-image">
                             <div class="hero-avatar glass-card">
-                                <div class="avatar-placeholder">
-                                    <span>KL</span>
+                                <div class="matrix-container">
+                                    <canvas id="matrix-canvas"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -108,20 +108,20 @@
                             <h2 class="section-title text-left">The Vision</h2>
                             <div class="about-text glass-card">
                                 <p>
-                                    I'm a <strong>Data & AI Engineer</strong> dedicated to building high-performance
-                                    automation and AI-driven workflows. From deploying cutting-edge LLMs like
-                                    <strong>GPT-4o</strong>, <strong>Gemini 1.5 Pro</strong>, and <strong>Claude
-                                        3.5 Sonnet</strong>
-                                    to orchestrating complex RAG pipelines, my mission is to bridge the gap between
-                                    raw data and intelligent, scalable solutions.
+                                    Automation is only as powerful as it is reliable. My vision is to democratize
+                                    access to high-performance AI by building infrastructure that is as
+                                    <strong>robust</strong> as it is <strong>intelligent</strong>. From architecting
+                                    resilient data collection pipelines to optimizing inference on <strong>vLLM</strong>
+                                    and <strong>Ollama</strong>, I ensure that sophisticated AI solutions remain
+                                    scalable and cost-effective.
                                 </p>
                                 <p>
-                                    I've deployed and optimized models across diverse infrastructure—from hyperscalers
-                                    like <strong>AWS, GCP, & Azure</strong> to GPU clouds like <strong>Runpod, Vast.ai,
-                                        & Lightning AI</strong>. I leverage tools like <strong>vLLM, Ollama, &
-                                        TensorRT-LLM</strong>
-                                    for efficient inference. On the agentic side, I build with <strong>LangChain,
-                                        LlamaIndex, CrewAI, & n8n</strong> to create sophisticated, autonomous systems.
+                                    Whether deploying frontier models like <strong>GPT</strong>,
+                                    <strong>Gemini</strong>,
+                                    and <strong>Claude</strong>—or orchestrating a fleet of autonomous agents with
+                                    <strong>LangChain</strong>, <strong>CrewAI</strong>, and <strong>n8n</strong>—my
+                                    goal is to deliver seamless, production-grade automation that drives tangible
+                                    efficiency.
                                 </p>
                             </div>
                         </div>
@@ -303,67 +303,52 @@
                     <div class="projects-bento">
                         <div class="project-card glass-card project-featured">
                             <div class="project-image">
-                                <img src="asset/project_ecommerce.png" alt="E-commerce Automation">
+                                <img src="asset/project_deal_aggregation.png" alt="Deal Aggregation & Analysis">
                             </div>
                             <div class="project-content">
                                 <div class="project-header">
                                     <span class="project-tag">Featured</span>
-                                    <span class="project-amount">$2,450</span>
+                                    <span class="project-amount">$20,000+</span>
                                 </div>
-                                <h3>E-commerce Data Automation</h3>
-                                <p>Architected a high-throughput automation engine that extracts, cleanses, and
-                                    synchronizes multi-market data at scale. Integrated advanced stealth mechanisms to
-                                    bypass modern anti-scraping layers.</p>
+                                <h3>Deal Aggregation & Analysis</h3>
+                                <p>Built an enterprise-grade AI-powered deal aggregation platform for Teddy Holdings PE,
+                                    collecting and analyzing business-for-sale opportunities (EBITDA >$2M, Revenue >$5M)
+                                    from 45+ sources. Enabled data-driven acquisition decisions across target
+                                    industries.</p>
+                                <div class="project-tech">
+                                    <i class="devicon-python-plain"></i>
+                                    <i class="devicon-selenium-original"></i>
+                                    <i class="devicon-pandas-original"></i>
+                                    <!-- <i class="devicon-docker-plain"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card">
+                            <div class="project-image">
+                                <img src="asset/project_ecommerce.png" alt="E-commerce Competitor Analysis">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">Data Scraping</span>
+                                </div>
+                                <h3>E-commerce Competitor Analysis</h3>
+                                <p>Scraped competitor product data including images, prices, links, and ingredients for
+                                    market analysis and strategic decision-making.</p>
                                 <div class="project-tech">
                                     <i class="devicon-python-plain"></i>
                                     <i class="devicon-selenium-original"></i>
                                     <i class="devicon-mongodb-plain"></i>
-                                    <i class="devicon-docker-plain"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="project-card glass-card">
-                            <div class="project-image">
-                                <img src="asset/project_scraping.png" alt="AI Scraping Tool">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-header">
-                                    <span class="project-tag">AI Integration</span>
-                                    <span class="project-amount">$363</span>
-                                </div>
-                                <h3>AI Scraping Tool</h3>
-                                <p>Self-learning scraper that adapts to DOM changes via LLM logic.</p>
-                                <div class="project-tech">
-                                    <i class="devicon-python-plain"></i>
-                                    <i class="devicon-openai-plain"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card glass-card">
-                            <div class="project-image">
-                                <img src="asset/project_supermarket.png" alt="Supermarket Data">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-header">
-                                    <span class="project-tag">Data Eng</span>
-                                    <span class="project-amount">$170</span>
-                                </div>
-                                <h3>Supermarket Scaler</h3>
-                                <p>Distributed pipeline processing millions of retail SKUs daily.</p>
-                                <div class="project-tech">
-                                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
-                                    <i class="devicon-pandas-original"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card glass-card project-wide">
                             <div class="project-image">
                                 <img src="asset/project_parser.png" alt="PDF Data Scraping">
                             </div>
                             <div class="project-content">
                                 <div class="project-header">
                                     <span class="project-tag">Automation</span>
-                                    <span class="project-amount">$180</span>
+                                    <!-- <span class="project-amount">$180</span> -->
                                 </div>
                                 <h3>Structured Doc Parser</h3>
                                 <p>OCR-driven system for extracting hierarchical data from complex PDF structures with
@@ -371,6 +356,26 @@
                                 <div class="project-tech">
                                     <i class="devicon-python-plain"></i>
                                     <i class="devicon-mysql-plain"></i>
+                                    <i class="devicon-docker-plain"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card project-wide">
+                            <div class="project-image">
+                                <img src="asset/project_image_qc.png" alt="Image Quality Review Pipeline">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <span class="project-tag">AI/ML</span>
+                                    <span class="project-amount">$2,450</span>
+                                </div>
+                                <h3>Image Quality Review Pipeline</h3>
+                                <p>Automated image collection pipeline with YOLO-based text detection for filtering and
+                                    quality verification (min 2K resolution). Streamlined dataset prep for ML systems.
+                                </p>
+                                <div class="project-tech">
+                                    <i class="devicon-python-plain"></i>
+                                    <i class="devicon-googlecloud-plain"></i>
                                     <i class="devicon-docker-plain"></i>
                                 </div>
                             </div>
@@ -400,7 +405,9 @@
 
                     <div class="testimonials-scroll-container no-scrollbar" id="testimonial-slider">
                         <div class="testimonials-flex-inner">
-                            <!-- Card 1: Sarah Chen -->
+
+
+                            <!-- Card 3: Crispijn De Koning -->
                             <article class="testimonial-card">
                                 <div class="card-top">
                                     <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -409,21 +416,23 @@
                                         </path>
                                     </svg>
                                     <p class="testimonial-text">
-                                        "The real-time crypto sentiment analysis pipeline delivered exceeded our
-                                        expectations in speed and accuracy."
+                                        "Highly recommend Laheri for his expertise in competitive data analysis. He is
+                                        fast, proactive, and consistently delivers
+                                        impeccable work on complex projects. A brilliant partner for any data-science
+                                        initiative."
                                     </p>
                                 </div>
                                 <div class="author-block">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqABYAgvokn3itJdfgnRqZ5j1g4FtXY7p9FttVX-dbH6jgxwv7Ql4jxir7_wMleKmHmhw-XH9yVy8X7O0CYzFSuwiZ-3PPIu73-Q2U0ikk_KaXpgCGa6cu1de9C9pfi1i4Ik4xV2Lyj9Nv7I28bWUqf5UCmcTeA8lzWZ14qFeHYewWBK5mxPFbf2DZTbwcQ4ce726silA9_FBRatq2Ofzyk9cvG05-moVZS1N5SPTb00TbidFFIMc2O6p8B_-c-9WbuoxJ7A4N6s"
-                                        alt="Sarah Chen" class="author-img">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQEqLsbbeYBYaw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727722102517?e=1772064000&v=beta&t=KLfCoIRQUlfelHl0ht3hW3TKtmfAVK1KMsZU98OUFw8"
+                                        alt="Crispijn De Koning" class="author-img">
                                     <div class="author-meta">
-                                        <h3 class="author-name">Sarah Chen</h3>
-                                        <p class="author-title">CTO, FinTech Solutions</p>
+                                        <h3 class="author-name">Crispijn De Koning</h3>
+                                        <p class="author-title">Entrepreneur, <br> Whisk</p>
                                     </div>
                                 </div>
                             </article>
 
-                            <!-- Card 2: Ririvin Covanderson -->
+                            <!-- Card 4: Yotam Segal -->
                             <article class="testimonial-card">
                                 <div class="card-top">
                                     <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -432,21 +441,23 @@
                                         </path>
                                     </svg>
                                     <p class="testimonial-text">
-                                        "The real-time crypto sentiment analysis pipeline delivered exceeded our
-                                        expectations... Built to scale using Data and Spark Streaming..."
+                                        "Keval is a top-tier professional in data automation. He mastered a technically
+                                        demanding project with ease and exceeded
+                                        all expectations. You are in great hands with his expertise and proactive
+                                        approach."
                                     </p>
                                 </div>
                                 <div class="author-block">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYB_r08W5W2lvKnzCBa-hLDI1uAAbyyyz9GcbxZMiA6U8vqWFS3fno4DS15Ge50J2zD1mZUwgUXYUEBL8v8jaDRO8PVNEsZQ7vzcJMEe1Gzqoa_yi3MGFFTcO0HmZQQYzwHcJHntBb-ZXyd9oVMHo5mziDsjbWSSxMiO0qT5MwJvLKFOgdEozCCXiNi-oQeUVfhddmfaTR35IYc_7jUChE-j1iEADD0lR0ICT7MAdQtDoHO4ufbmdv-A1VONflGuolZUN70Nj3zZc"
-                                        alt="Ririvin Covanderson" class="author-img">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQEDYv9GQL3Khg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724382301954?e=1772064000&v=beta&t=dcoM_zx9YSDTBMT3w5raYkGe4ho_D5ZHqk_Y7V0rjyE"
+                                        alt="Yotam Segal" class="author-img">
                                     <div class="author-meta">
-                                        <h3 class="author-name">Ririvin Covanderson</h3>
-                                        <p class="author-title">Company Inc.</p>
+                                        <h3 class="author-name">Yotam Segal</h3>
+                                        <p class="author-title">CEO, <br> McCarren</p>
                                     </div>
                                 </div>
                             </article>
 
-                            <!-- Card 3: Jennifer Pornador -->
+                            <!-- Card 5: Shawn Fateh -->
                             <article class="testimonial-card">
                                 <div class="card-top">
                                     <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -455,21 +466,46 @@
                                         </path>
                                     </svg>
                                     <p class="testimonial-text">
-                                        "The real-time crypto sentiment analysis pipeline delivered... Built to scale
-                                        using Il and Kafka..."
+                                        "Keval is an incredible technical partner who handled a complex competitive
+                                        intelligence project with ease. He navigated
+                                        difficult data challenges using innovative methods and delivered high-quality
+                                        results ahead of schedule."
                                     </p>
                                 </div>
                                 <div class="author-block">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzT52o41zKaq7DKAVtEqRM6BidJdwLA2tevA6r4lVlvJSMqRaHgCL4hQPaLKimt3Phny1wb8RmK6WLhthb7tysCa1mHuYYXeFcg_YDcdtRw__PmCxB8E_NLnfhKob_okHebKl3cg8Kdzv7qAymFCL7gurtgGtdmsV4AXfPKEVEHbIXq8AWNIJHymMgoqkGDzLfHzK4p8l4uExv57XiLhYHZu94YYp2u6ShA7-ySzNGciwy5DR96_rrfOt2qwa4IliWRb63lDicLR0"
-                                        alt="Jennifer Pornador" class="author-img">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQEuQ-akQ5z8NA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677518463498?e=1772064000&v=beta&t=1gCnCiyuaqjM3ueRAuZaA8tzaz7dfSdAW2CajcuELv8"
+                                        alt="Shawn Fateh" class="author-img">
                                     <div class="author-meta">
-                                        <h3 class="author-name">Jennifer Pornador</h3>
-                                        <p class="author-title">Company Eirams</p>
+                                        <h3 class="author-name">Shawn Fateh</h3>
+                                        <p class="author-title">Partner, <br> Pacific Red Holdings</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Card 1: Libby -->
+                            <article class="testimonial-card">
+                                <div class="card-top">
+                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
+                                        </path>
+                                    </svg>
+                                    <p class="testimonial-text">
+                                        "Keval is diligent, reliable, and always punctual. Communication has been smooth
+                                        and friendly, and he often goes beyond
+                                        his responsibilities to offer additional help. His work ethic and character are
+                                        truly admirable."
+                                    </p>
+                                </div>
+                                <div class="author-block">
+                                    <div class="author-img">L</div>
+                                    <div class="author-meta">
+                                        <h3 class="author-name">Libby</h3>
+                                        <p class="author-title">Project Manager,<br> AI Data Solutions</p>
                                     </div>
                                 </div>
                             </article>
 
-                            <!-- Card 4: Leuis Kil -->
+                            <!-- Card 2: Sanjana Ghosh -->
                             <article class="testimonial-card">
                                 <div class="card-top">
                                     <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -478,39 +514,17 @@
                                         </path>
                                     </svg>
                                     <p class="testimonial-text">
-                                        "The real-time... delivered exceeded our expectations in speed and accuracy. It
-                                        was a pleasure working with the team."
+                                        "Keval is a fantastic resource for complex data projects. He delivers
+                                        impeccable, timely work and is a proactive
+                                        communicator. I highly recommend him for any broad data science needs."
                                     </p>
                                 </div>
                                 <div class="author-block">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzT52o41zKaq7DKAVtEqRM6BidJdwLA2tevA6r4lVlvJSMqRaHgCL4hQPaLKimt3Phny1wb8RmK6WLhthb7tysCa1mHuYYXeFcg_YDcdtRw__PmCxB8E_NLnfhKob_okHebKl3cg8Kdzv7qAymFCL7gurtgGtdmsV4AXfPKEVEHbIXq8AWNIJHymMgoqkGDzLfHzK4p8l4uExv57XiLhYHZu94YYp2u6ShA7-ySzNGciwy5DR96_rrfOt2qwa4IliWRb63lDicLR0"
-                                        alt="Leuis Kil" class="author-img">
+                                    <img src="https://media.licdn.com/dms/image/v2/D5603AQF2_3yUc-wOMw/profile-displayphoto-crop_800_800/B56ZmGhl3YJoAI-/0/1758898577222?e=1772064000&v=beta&t=R8Th1Ll6UzQAzQUNi6lSGdmSCN2pJ3ZeAqgfHUlivK0"
+                                        alt="Sanjana Ghosh" class="author-img">
                                     <div class="author-meta">
-                                        <h3 class="author-name">Leuis Kil</h3>
-                                        <p class="author-title">CTO, FinTech...</p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Card 5: Marcus Thorne -->
-                            <article class="testimonial-card">
-                                <div class="card-top">
-                                    <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.357 13.57 17.389 13.073L16.279 8.629C15.085 9.073 14.062 9.689 13.209 10.477C12.357 11.265 11.75 12.151 11.389 13.135L11.389 21L14.017 21ZM5 21L5 18C5 16.896 5.304 15.923 5.912 15.081C6.52 14.239 7.34 13.57 8.372 13.073L7.262 8.629C6.068 9.073 5.045 9.689 4.192 10.477C3.34 11.265 2.733 12.151 2.372 13.135L2.372 21L5 21Z">
-                                        </path>
-                                    </svg>
-                                    <p class="testimonial-text">
-                                        "The automation scripts delivered saved us over 40 hours of manual work weekly.
-                                        The precision in data extraction from complex PDFs is simply unmatched."
-                                    </p>
-                                </div>
-                                <div class="author-block">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqABYAgvokn3itJdfgnRqZ5j1g4FtXY7p9FttVX-dbH6jgxwv7Ql4jxir7_wMleKmHmhw-XH9yVy8X7O0CYzFSuwiZ-3PPIu73-Q2U0ikk_KaXpgCGa6cu1de9C9pfi1i4Ik4xV2Lyj9Nv7I28bWUqf5UCmcTeA8lzWZ14qFeHYewWBK5mxPFbf2DZTbwcQ4ce726silA9_FBRatq2Ofzyk9cvG05-moVZS1N5SPTb00TbidFFIMc2O6p8B_-c-9WbuoxJ7A4N6s"
-                                        alt="Marcus Thorne" class="author-img">
-                                    <div class="author-meta">
-                                        <h3 class="author-name">Marcus Thorne</h3>
-                                        <p class="author-title">Head of Operations, LogiStream</p>
+                                        <h3 class="author-name">Sanjana Ghosh</h3>
+                                        <p class="author-title">Managerial Economist</p>
                                     </div>
                                 </div>
                             </article>

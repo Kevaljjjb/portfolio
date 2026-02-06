@@ -564,8 +564,8 @@ h6 {
 }
 
 .hero-avatar {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
@@ -573,6 +573,12 @@ h6 {
     position: relative;
     overflow: hidden;
     animation: float 6s ease-in-out infinite;
+    /* Glassmorphism Refined */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes float {
@@ -587,41 +593,40 @@ h6 {
     }
 }
 
-.hero-avatar::before {
-    content: '';
-    position: absolute;
-    inset: -50%;
-    background: linear-gradient(45deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
-    animation: rotate 6s linear infinite;
-}
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.avatar-placeholder {
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    background: var(--bg-dark);
-    border-radius: calc(var(--radius-lg) - 2px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    font-weight: 700;
-    color: var(--primary-light);
+.matrix-container {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: var(--radius-lg);
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
+
+#matrix-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Horizontal vignette effect */
+.matrix-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(10, 10, 10, 0.8) 0%,
+            transparent 20%,
+            transparent 80%,
+            rgba(10, 10, 10, 0.8) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
 
 .scroll-indicator {
     position: absolute;
@@ -817,8 +822,7 @@ h6 {
 ================================ */
 .projects-bento {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
@@ -831,9 +835,9 @@ h6 {
     overflow: hidden;
 }
 
-.project-featured {
+.project-featured,
+.project-wide {
     grid-column: span 2;
-    grid-row: span 1;
 }
 
 .project-featured .project-content {
@@ -842,9 +846,7 @@ h6 {
     justify-content: center;
 }
 
-.project-wide {
-    grid-column: span 3;
-}
+/* The original .project-wide rule was removed as it's now covered by the combined rule above */
 
 .section-header {
     margin-bottom: 64px;
@@ -1087,7 +1089,17 @@ h6 {
     height: 56px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .author-name {

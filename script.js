@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonialSlider();
     initProjectSearch();
     initProjectFilters();
+    initMatrixEffect();
 });
 
 // ================================
@@ -442,4 +443,154 @@ function initProjectFilters() {
     projectFilters.forEach(btn => {
         btn.addEventListener('click', () => applyFilter(btn.dataset.category));
     });
+}
+
+// ================================
+// Matrix Rain Effect
+// ================================
+function initMatrixEffect() {
+    const canvas = document.getElementById('matrix-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size
+    function resizeCanvas() {
+        const container = canvas.parentElement;
+        canvas.width = container.offsetWidth;
+        canvas.height = container.offsetHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', debounce(resizeCanvas, 250));
+
+    // Matrix characters - mix of letters, numbers, and symbols
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*(){}[]<>?/\\|~';
+    const charArray = chars.split('');
+
+    const fontSize = 24;
+    const rowSpacing = 40; // Larger spacing prevents overlap and looks cleaner
+    let rows = Math.floor(canvas.height / rowSpacing);
+
+    // Array to track the x position and direction of each row
+    let drops = [];
+    let directions = []; // 1 = left-to-right, -1 = right-to-left
+
+    // Initialize drops with staggered positions
+    function initDrops() {
+        rows = Math.floor(canvas.height / rowSpacing);
+        drops = [];
+        directions = [];
+        const maxChars = canvas.width / fontSize;
+
+        for (let i = 0; i < rows; i++) {
+            // Alternate directions
+            directions[i] = i % 2 === 0 ? 1 : -1;
+
+            // Stagger starting positions across the canvas so it's never empty
+            if (directions[i] === 1) {
+                // Left-to-right: start at various points from left
+                drops[i] = (i * (maxChars / rows)) % maxChars - 12;
+            } else {
+                // Right-to-left: start at various points from right  
+                drops[i] = maxChars - ((i * (maxChars / rows)) % maxChars) + 12;
+            }
+        }
+    }
+
+    initDrops();
+
+    // Reinitialize drops on resize
+    window.addEventListener('resize', debounce(() => {
+        resizeCanvas();
+        initDrops();
+    }, 250));
+
+    // Draw function
+    function draw() {
+        // Clear canvas completely - no trails
+        ctx.fillStyle = 'rgba(10, 10, 10, 1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = `${fontSize}px monospace`;
+
+        const streamLength = 12; // Number of characters per stream
+        const maxChars = canvas.width / fontSize;
+
+        for (let i = 0; i < drops.length; i++) {
+            // Vertical position (y) - fixed for each row
+            const y = i * rowSpacing + rowSpacing;
+            const dir = directions[i];
+
+            // Draw multiple characters per row
+            for (let j = 0; j < streamLength; j++) {
+                const char = charArray[Math.floor(Math.random() * charArray.length)];
+
+                // Each character in the stream is offset based on direction
+                const x = (drops[i] - (j * dir)) * fontSize;
+
+                // Skip if outside visible area
+                if (x < -fontSize || x > canvas.width + fontSize) continue;
+
+                // Lead character (j=0) is brightest, fades towards tail
+                const fadeRatio = 1 - (j / streamLength);
+                const brightness = Math.floor(80 + fadeRatio * 175);
+
+                if (j === 0) {
+                    // Lead character - bright white with glow
+                    ctx.fillStyle = '#ffffff';
+                    ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+                    ctx.shadowBlur = 10;
+                } else {
+                    ctx.fillStyle = `rgba(${brightness}, ${brightness}, ${brightness}, ${0.3 + fadeRatio * 0.7})`;
+                    ctx.shadowBlur = 0;
+                }
+
+                ctx.fillText(char, x, y);
+                ctx.shadowBlur = 0;
+            }
+
+            // Reset drop based on direction
+            if (dir === 1) {
+                // Left-to-right: reset when goes off right side
+                if (drops[i] * fontSize > canvas.width + streamLength * fontSize) {
+                    drops[i] = -streamLength;
+                }
+            } else {
+                // Right-to-left: reset when goes off left side
+                if (drops[i] * fontSize < -streamLength * fontSize) {
+                    drops[i] = maxChars + streamLength;
+                }
+            }
+
+            // Move drop based on direction
+            drops[i] += 0.15 * dir;
+        }
+    }
+
+    // Animation loop
+    let animationId;
+    function animate() {
+        draw();
+        animationId = requestAnimationFrame(animate);
+    }
+
+    // Start animation
+    animate();
+
+    // Pause animation when not visible (performance optimization)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!animationId) animate();
+            } else {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(canvas);
 }
