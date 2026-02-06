@@ -339,6 +339,7 @@ h6 {
 .nav-cta:hover {
     background: var(--primary);
     border-color: var(--primary);
+    color: var(--bg-dark) !important;
 }
 
 .nav-cta::after {
